@@ -13,9 +13,13 @@
 
 .list--inline {
   display: inline-flex;
+}
 
-  & li:not(:last-child) {
-    margin-right: 2.3rem;
+@media screen and (min-width: 768px) {
+  .list--inline {
+    & li:not(:last-child) {
+      margin-right: 2.3rem;
+    }
   }
 }
 
