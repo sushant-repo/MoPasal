@@ -1,0 +1,114 @@
+.btn {
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  height: 4rem;
+  margin: 1rem 0;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all 0.15s;
+  white-space: nowrap;
+
+  &--primary {
+    color: $white-color;
+    background-color: $primary-color;
+
+    &--round {
+      @include round-button($primary-color);
+
+      &--outline {
+        @include round-outline-button($primary-color);
+      }
+    }
+
+    &--outline {
+      @include outline-button($primary-color);
+    }
+  }
+  &--secondary {
+    color: $white-color;
+    background-color: $secondary-color;
+    &--round {
+      @include round-button($secondary-color);
+      &--outline {
+        @include round-outline-button($secondary-color);
+      }
+    }
+
+    &--outline {
+      @include outline-button($secondary-color);
+    }
+  }
+  &--accent {
+    color: $white-color;
+    background-color: $accent-color;
+    &--round {
+      @include round-button($accent-color);
+      &--outline {
+        @include round-outline-button($accent-color);
+      }
+    }
+
+    &--outline {
+      @include outline-button($accent-color);
+    }
+  }
+  &--disabled {
+    color: $white-color;
+    background-color: $text-color-light;
+    &--round {
+      @include round-button($text-color-light);
+      &--outline {
+        @include round-outline-button($text-color-light);
+      }
+    }
+
+    &--outline {
+      @include outline-button($text-color-light);
+    }
+  }
+
+  &--round {
+    border-radius: 40px;
+  }
+
+  &--block {
+    width: 100%;
+    display: block;
+  }
+
+  &:hover {
+    box-shadow: 0 0 1rem lighten($black-color, 80%);
+    transform: translateY(-1px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+
+  & button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-group {
+    justify-content: flex-start;
+    flex-direction: row;
+    & .btn:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

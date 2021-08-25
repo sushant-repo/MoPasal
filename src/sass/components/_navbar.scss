@@ -1,0 +1,55 @@
+.nav {
+  flex-wrap: wrap;
+  font-size: 2.6rem;
+  padding: 2rem 0;
+  transition: all 0.3s;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 50px;
+  }
+
+  & &__list {
+    max-height: 0;
+    opacity: 1;
+    transition: all 0.3s;
+
+    & .list__item {
+      display: none;
+    }
+  }
+}
+
+.nav--expanded .nav__list {
+  margin-top: 2rem;
+  max-height: 100vh;
+  opacity: 1;
+
+  & .list__item {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+
+    & &__list {
+      display: inline-flex;
+      width: auto;
+
+      & .list__item {
+        display: block;
+      }
+    }
+
+    & &__toggler {
+      display: none;
+    }
+  }
+}

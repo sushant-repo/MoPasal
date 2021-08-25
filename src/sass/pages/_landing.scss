@@ -1,0 +1,33 @@
+.landing {
+  background: lighten($primary-color, 45%);
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.content {
+  align-self: center;
+}
+
+.landing p {
+  margin-top: 2rem;
+}
+
+.landing__header {
+  font-weight: 200;
+}
+
+.green {
+  color: $accent-color;
+}
+
+.landing__sub-header {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .landing {
+    text-align: left;
+    height: 90vh;
+  }
+}

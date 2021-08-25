@@ -1,0 +1,17 @@
+@mixin round-button($color) {
+  border-radius: 40px;
+  color: $white-color;
+  background-color: $color;
+}
+@mixin outline-button($color) {
+  color: $color;
+  border: 1px solid $color;
+  background: $white-color;
+}
+
+@mixin round-outline-button($color) {
+  color: $color;
+  border-radius: 40px;
+  border: 1px solid $color;
+  background: $white-color;
+}
