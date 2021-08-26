@@ -40,8 +40,10 @@
     border-bottom: 1px solid #eee;
   }
 }
-
-.nav .nav__icon {
+.nav__toggler {
+  cursor: pointer;
+}
+.nav .menu__chevron {
   color: $primary-color;
   padding: 0;
   font-size: inherit;
@@ -78,5 +80,9 @@
     & &__toggler {
       display: none;
     }
+  }
+
+  .nav--expanded .nav__list {
+    margin-top: 0;
   }
 }

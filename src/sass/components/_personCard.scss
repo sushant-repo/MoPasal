@@ -1,0 +1,110 @@
+$card-top-height: 10rem;
+
+.card {
+  border: 1px solid $text-color-light;
+  text-align: center;
+  border-radius: 4px;
+  background: white;
+  transition: all 0.2s;
+
+  //   width: 272px;
+
+  &__top {
+    width: 100%;
+    height: $card-top-height;
+    background-color: lighten($primary-color, 30%);
+    overflow: hidden;
+  }
+
+  &__bottom {
+    padding: 2rem;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.block--featured-person .grid {
+  gap: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .feature-person {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .feature-person {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature-person {
+  margin: 2rem 0;
+}
+
+.person {
+  position: relative;
+
+  &__image {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    margin: 0 auto;
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    border: 2px solid $white-color;
+    background: black;
+    z-index: 3;
+
+    & img {
+      object-fit: cover;
+      border-radius: 100%;
+    }
+    &:hover img {
+      cursor: pointer;
+      filter: brightness(50%);
+    }
+
+    &:hover::before {
+      content: "Open";
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+      color: white;
+      display: block;
+    }
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: normal;
+    color: $black-color;
+    margin-bottom: 0;
+  }
+
+  &__company {
+    opacity: 0.5;
+  }
+
+  &__description {
+    margin: 2rem 0;
+  }
+  & .icon-group {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .person__description {
+    font-size: 90%;
+  }
+}

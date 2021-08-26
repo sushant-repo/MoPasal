@@ -24,3 +24,22 @@
     margin: 0 1.5rem;
   }
 }
+
+.block {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+
+.block__header .block__heading::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #151b52;
+  width: 10%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.block__link {
+  color: $primary-color;
+}

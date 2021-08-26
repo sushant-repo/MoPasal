@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Icon from "./icon";
 
 import logo from "../../images/logo-initial.png";
 
 const NavBar = (props) => {
+  // this function is used to always hide the navbar menu options of screen load
+  window.onresize = reportWindowSize;
+
   const [isOpen, setisOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -13,38 +16,52 @@ const NavBar = (props) => {
 
   const getMenuOptions = () => {
     if (props.currentPage === "landing") {
+      // Return menu options for landing page only
       return (
         <ul className="list list--inline nav__list">
           <li className="list__item">
-            <button className="btn btn--primary--round">login</button>
+            <NavLink to="/">
+              <button className="btn btn--primary--round">login</button>
+            </NavLink>
           </li>
           <li className="list__item">
-            <button className="btn btn--accent--round--outline">
-              register
-            </button>
+            <NavLink to="/">
+              <button className="btn btn--accent--round--outline">
+                register
+              </button>
+            </NavLink>
           </li>
         </ul>
       );
     }
 
+    // return menu options for all pages except landing
     return (
       <ul className="list list--inline nav__list">
-        <li className="list__item">
-          <Link to="/">Home</Link>
+        <li className="list__item" onClick={() => setisOpen(false)}>
+          <NavLink to="/home">Home</NavLink>
         </li>
-        <li className="list__item">
-          <Link to="/shop">
+        <li className="list__item" onClick={() => setisOpen(false)}>
+          <NavLink to="/shop">
             <span className="item-group">
               Shop
-              <Icon name="fa fa-angle-down" className="icon nav__icon" />
+              <Icon name="fa fa-angle-down" className="icon menu__chevron" />
             </span>
-          </Link>
+          </NavLink>
         </li>
-        <li className="list__item">Our Network</li>
-        <li className="list__item">News</li>
-        <li className="list__item">Careers</li>
-        <li className="list__item">
-          <button className="btn btn--primary">login</button>
+        <li className="list__item" onClick={() => setisOpen(false)}>
+          <NavLink to="">Our Network</NavLink>
+        </li>
+        <li className="list__item" onClick={() => setisOpen(false)}>
+          <NavLink to="">News</NavLink>
+        </li>
+        <li className="list__item" onClick={() => setisOpen(false)}>
+          <NavLink to="">Careers</NavLink>
+        </li>
+        <li className="list__item" onClick={() => setisOpen(false)}>
+          <NavLink to="">
+            <button className="btn btn--primary">login</button>
+          </NavLink>
         </li>
       </ul>
     );
@@ -72,7 +89,6 @@ const NavBar = (props) => {
   function reportWindowSize() {
     window.innerWidth >= 768 ? setisOpen(true) : setisOpen(false);
   }
-  window.onresize = reportWindowSize;
 };
 
 export default NavBar;
