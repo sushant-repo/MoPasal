@@ -60,3 +60,30 @@
 .block--features {
   background-color: lighten($primary-color, 48%);
 }
+
+.block--process {
+  background-image: linear-gradient(rgba(black, 0.5), rgba(black, 0.5)),
+    url("../../images/handshake-4002834.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 6rem 0;
+
+  & .block__header,
+  & .block__heading {
+    color: $white-color;
+  }
+
+  & .block__heading::after {
+    border-color: $white-color;
+  }
+}
+
+.process {
+  gap: 2rem;
+}
+
+.media--process:hover {
+  opacity: 1;
+}

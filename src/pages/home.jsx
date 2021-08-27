@@ -3,6 +3,8 @@ import React from "react";
 import PersonCard from "../components/common/personCard";
 import FeatureCard from "../components/common/featureCard";
 import Icon from "../components/common/icon";
+import MediaCard from "../components/common/mediaCard";
+import Button from "../components/common/button";
 
 import HomeHero from "../components/homeHero";
 import Block, { BlockItems } from "../components/common/block";
@@ -10,8 +12,10 @@ import Block, { BlockItems } from "../components/common/block";
 import { getBlockData } from "../blockData";
 import { ReactComponent as AgricultureLogo } from "../images/icons/agriculture.svg";
 import { ReactComponent as QualityLogo } from "../images/icons/muscle.svg";
+import { ReactComponent as UserIcon } from "../images/icons/user.svg";
+import { ReactComponent as FarmerIcon } from "../images/icons/farmer.svg";
+import { ReactComponent as PartnerIcon } from "../images/icons/partner.svg";
 import heroImage from "../images/home-hero.jpg";
-import Button from "../components/common/button";
 
 const Home = () => {
   const blocks = getBlockData();
@@ -92,6 +96,32 @@ const Home = () => {
 
       <Block wrapper="container" data={aboutUs}>
         <Button className="btn btn--primary">Read More</Button>
+      </Block>
+
+      <Block wrapper="container" className="block--process" data={process}>
+        <BlockItems className="grid process">
+          <MediaCard
+            className="media--process"
+            title="join as customer"
+            body="Get exciting offers and discounts when you purchase from us. The more purchase you make, the more discounts you get. You are not just buying products, you are helping us change lives."
+          >
+            <UserIcon />
+          </MediaCard>
+          <MediaCard
+            className="media--process"
+            title="join as producer"
+            body="When you partner up with MoPasal, you are not just selling your products, but you are helping us being revolution to how agro business works. Support us and we will ensure your security and sustainability."
+          >
+            <FarmerIcon />
+          </MediaCard>
+          <MediaCard
+            className="media--process"
+            title="join as partner/sponsor"
+            body="MoPasal is all about bringing in a revolutionary change in agro business and community. You can join our movement as a producer/supply chain or be our supporter through sponsorships. We aim to change our society more than just doing profitable business. We work hard to heal before every meal."
+          >
+            <PartnerIcon />
+          </MediaCard>
+        </BlockItems>
       </Block>
     </>
   );
