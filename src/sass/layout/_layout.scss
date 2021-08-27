@@ -26,18 +26,28 @@
 }
 
 .block {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
   text-align: center;
+  padding: 3rem 0;
 }
-
+.block__header {
+  margin: 6rem 0;
+  & a {
+    color: $primary-color;
+  }
+}
+.block__heading {
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
 .block__header .block__heading::after {
   content: "";
   display: block;
   border-bottom: 3px solid #151b52;
   width: 10%;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .block__link {

@@ -1,9 +1,10 @@
 import React from "react";
 
-const Icon = ({ name, className, onClick }) => {
+const Icon = ({ name, src, className, onClick }) => {
   return (
     <span className={className} onClick={onClick}>
-      <i className={name} aria-hidden="true"></i>
+      {src && <img src={src} alt="icon" />}
+      {name && <i className={name} aria-hidden="true"></i>}
     </span>
   );
 };

@@ -44,6 +44,8 @@
 
   &__heading {
     text-shadow: 1px 1px 0 $black-color;
+    font-weight: 100;
+    line-height: 140%;
   }
 }
 
@@ -53,4 +55,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.block--features {
+  background-color: lighten($primary-color, 48%);
 }
