@@ -2,14 +2,16 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+@import "layout/layout";
+
+@import "components/input";
 @import "components/button";
 @import "components/navbar";
 @import "components/icon";
 @import "components/personCard";
 @import "components/featureCard";
 @import "components/mediaCard";
-
-@import "layout/layout";
+@import "components/footer";
 
 @import "pages/landing";
 @import "pages/home";

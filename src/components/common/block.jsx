@@ -3,18 +3,19 @@ import ConditionalWrapper from "../../utils/conditionalWrapper";
 
 const Block = (props) => {
   const { className, data, children, wrapper = "" } = props;
-  console.log(data);
-  const { title, description } = data;
+
   return (
     <section className={`block ${className}`}>
       <ConditionalWrapper
         condition={wrapper}
         wrapper={(children) => <div className={wrapper}>{children}</div>}
       >
-        <header className="block__header">
-          <h2 className="block__heading">{title}</h2>
-          <p>{description}</p>
-        </header>
+        {data && (
+          <header className="block__header">
+            <h2 className="block__heading">{data.title}</h2>
+            <p>{data.description}</p>
+          </header>
+        )}
         {children}
       </ConditionalWrapper>
     </section>

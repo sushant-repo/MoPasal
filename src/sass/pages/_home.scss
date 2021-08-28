@@ -87,3 +87,20 @@
 .media--process:hover {
   opacity: 1;
 }
+
+.network {
+  flex-wrap: wrap;
+}
+
+.brand {
+  margin: 1rem;
+}
+
+.brand {
+  max-height: 10rem;
+  width: auto;
+}
+
+.brand--greyscale {
+  filter: grayscale(100%);
+}

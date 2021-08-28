@@ -21,11 +21,15 @@
 
 @media screen and (max-width: 768px) {
   .media {
-    grid-template-columns: 90px auto;
+    // grid-template-columns: 90px auto;
+    grid: none;
 
     &__details {
-      text-align: left;
+      text-align: center;
       padding-left: 1rem;
+    }
+    &__title {
+      margin: 2rem 0;
     }
   }
 }

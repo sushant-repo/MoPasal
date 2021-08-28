@@ -3,6 +3,10 @@
   display: grid;
 }
 
+.grid--inline {
+  display: inline-grid;
+}
+
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
@@ -13,6 +17,11 @@
   }
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 // Container
 .container {
   max-width: 1140px;
@@ -52,4 +61,8 @@
 
 .block__link {
   color: $primary-color;
+}
+
+hr {
+  margin: 3rem 0;
 }

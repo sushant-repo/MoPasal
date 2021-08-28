@@ -38,10 +38,10 @@ const NavBar = (props) => {
     // return menu options for all pages except landing
     return (
       <ul className="list list--inline nav__list">
-        <li className="list__item" onClick={() => setisOpen(false)}>
+        <li className="list__item nav__item" onClick={() => setisOpen(false)}>
           <NavLink to="/home">Home</NavLink>
         </li>
-        <li className="list__item" onClick={() => setisOpen(false)}>
+        <li className="list__item nav__item" onClick={() => setisOpen(false)}>
           <NavLink to="/shop">
             <span className="item-group">
               Shop
@@ -49,16 +49,16 @@ const NavBar = (props) => {
             </span>
           </NavLink>
         </li>
-        <li className="list__item" onClick={() => setisOpen(false)}>
+        <li className="list__item nav__item" onClick={() => setisOpen(false)}>
           <NavLink to="">Our Network</NavLink>
         </li>
-        <li className="list__item" onClick={() => setisOpen(false)}>
+        <li className="list__item nav__item" onClick={() => setisOpen(false)}>
           <NavLink to="">News</NavLink>
         </li>
-        <li className="list__item" onClick={() => setisOpen(false)}>
+        <li className="list__item nav__item" onClick={() => setisOpen(false)}>
           <NavLink to="">Careers</NavLink>
         </li>
-        <li className="list__item" onClick={() => setisOpen(false)}>
+        <li className="list__item nav__item" onClick={() => setisOpen(false)}>
           <NavLink to="">
             <button className="btn btn--primary">login</button>
           </NavLink>

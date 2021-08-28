@@ -8,14 +8,23 @@ import Button from "../components/common/button";
 
 import HomeHero from "../components/homeHero";
 import Block, { BlockItems } from "../components/common/block";
+import Footer, { FooterItems } from "../components/common/footer";
 
 import { getBlockData } from "../blockData";
+
+import logo from "../images/logo-initial.png";
 import { ReactComponent as AgricultureLogo } from "../images/icons/agriculture.svg";
 import { ReactComponent as QualityLogo } from "../images/icons/muscle.svg";
 import { ReactComponent as UserIcon } from "../images/icons/user.svg";
 import { ReactComponent as FarmerIcon } from "../images/icons/farmer.svg";
 import { ReactComponent as PartnerIcon } from "../images/icons/partner.svg";
 import heroImage from "../images/home-hero.jpg";
+import Company from "../components/footer/company";
+import FooterMenu from "../components/footer/footerMenu";
+import NewsLetter from "../components/footer/newsletter";
+import Resources from "../components/footer/resources";
+import Policies from "../components/footer/policies";
+import FooterSocial from "../components/footer/footerSocial";
 
 const Home = () => {
   const blocks = getBlockData();
@@ -123,6 +132,37 @@ const Home = () => {
           </MediaCard>
         </BlockItems>
       </Block>
+
+      <Block wrapper="container" className="block--network" data={network}>
+        <BlockItems className="flex network">
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+          <img className="brand brand--greyscale" src={logo} alt="" />
+        </BlockItems>
+      </Block>
+      <Footer wrapper="container" className="block--footer">
+        <FooterItems className="grid footer--top">
+          <Company />
+          <FooterMenu />
+          <NewsLetter />
+          <Resources />
+        </FooterItems>
+
+        <hr />
+        <FooterItems className="grid footer--bottom">
+          <Policies />
+          <FooterSocial />
+        </FooterItems>
+      </Footer>
     </>
   );
 };
